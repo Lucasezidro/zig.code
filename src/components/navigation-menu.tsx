@@ -19,9 +19,9 @@ export function Menu() {
       description: 'Veja, edite, ou crie dados do seu perfil.',
     },
     {
-      title: 'Meus conteudos',
-      href: '/profile/blog/content',
-      description: 'Acesse todos os conteudos que voce ja criou.',
+      title: 'Meu Portifolio',
+      href: '/profile/portifolio',
+      description: 'Acesse o seu portifolio, ou crie o seu se necessario!',
     },
   ]
 
@@ -48,9 +48,17 @@ export function Menu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/blog/create-content" legacyBehavior passHref>
+          <Link href="/recruters" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Criar novo conteudo
+              Recrutadores
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link href="/jobs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Vagas
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

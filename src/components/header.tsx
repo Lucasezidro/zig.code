@@ -21,8 +21,8 @@ export function Header() {
         <Separator orientation="vertical" className="h-8" />
 
         <Input
-          placeholder="Busque por artigo ou tema"
-          className="bg-zinc-800"
+          placeholder="Busque por nome ou cargo ou status"
+          className="bg-zinc-800 w-[23rem]"
         />
 
         <Separator orientation="vertical" className="h-8" />
