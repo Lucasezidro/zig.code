@@ -12,6 +12,7 @@ export type Worker = {
   bio: string
   enterprise?: string
   messages?: string
+  links?: string
   skils?: {
     skilName: string
     skilLogo: ReactNode

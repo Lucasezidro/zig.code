@@ -2,13 +2,14 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
-import { FaReact } from 'react-icons/fa'
-import { IoLogoJavascript } from 'react-icons/io5'
-import { SiNextdotjs } from 'react-icons/si'
-import { RiNodejsLine } from 'react-icons/ri'
 import { Button } from '@/components/ui/button'
+import { SkillsModal } from './skills-modal'
+import { SKILLS } from '@/helpers/skills'
 
 export function FormProfile() {
+  const addedSkils = SKILLS.filter((skill) => skill.added === true)
+  const restOfSkills = SKILLS.filter((skill) => skill.added === false)
+
   return (
     <form action="" className="flex flex-col w-full h-full p-8 gap-4">
       <div className="flex items-center gap-4">
@@ -80,11 +81,11 @@ export function FormProfile() {
         <h2 className="font-bold">Minhas skils</h2>
 
         <div className="flex items-center gap-4">
-          <FaReact className="size-8 text-cyan-500" />
-          <SiNextdotjs className="size-8" />
-          <RiNodejsLine className="size-8 text-green-600" />
-          <IoLogoJavascript className="size-8 text-amber-500" />
-          <Button variant="link">Adicionar skill</Button>
+          {addedSkils.map((skill, i) => (
+            <div key={i}>{skill.icon}</div>
+          ))}
+
+          <SkillsModal addedSkils={addedSkils} restOfSkills={restOfSkills} />
         </div>
       </div>
     </form>
