@@ -41,7 +41,6 @@ export const dataWorkers: Worker[] = [
     email: faker.internet.email(),
     office: faker.person.jobTitle(),
     status: 'hiring',
-
     bio: faker.person.bio(),
     avatar: faker.image.avatarGitHub(),
   },
@@ -72,7 +71,6 @@ export const dataWorkers: Worker[] = [
     email: faker.internet.email(),
     office: faker.person.jobTitle(),
     status: 'hiring',
-
     bio: faker.person.bio(),
     avatar: faker.image.avatarGitHub(),
   },
@@ -103,7 +101,6 @@ export const dataWorkers: Worker[] = [
     email: faker.internet.email(),
     office: faker.person.jobTitle(),
     status: 'hiring',
-
     bio: faker.person.bio(),
     avatar: faker.image.avatarGitHub(),
   },
@@ -134,7 +131,6 @@ export const dataWorkers: Worker[] = [
     email: faker.internet.email(),
     office: faker.person.jobTitle(),
     status: 'hiring',
-
     bio: faker.person.bio(),
     avatar: faker.image.avatarGitHub(),
   },

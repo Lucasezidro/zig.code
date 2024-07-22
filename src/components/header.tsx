@@ -1,3 +1,5 @@
+'use client'
+
 import {
   DropdownMenuContent,
   DropdownMenuTrigger,
@@ -9,8 +11,11 @@ import { Input } from './ui/input'
 import { Separator } from './ui/separator'
 import { Menu } from './navigation-menu'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
+  const location = usePathname()
+
   return (
     <div className="bg-zinc-900 p-8 w-full flex items-center justify-between">
       <div className="flex items-center justify-between gap-3">
@@ -18,12 +23,16 @@ export function Header() {
           <span className="text-rose-500">zig</span>.code
         </Link>
 
-        <Separator orientation="vertical" className="h-8" />
+        {(location === '/' || location === '/recruters') && (
+          <>
+            <Separator orientation="vertical" className="h-8" />
 
-        <Input
-          placeholder="Busque por nome ou cargo ou status"
-          className="bg-zinc-800 w-[23rem]"
-        />
+            <Input
+              placeholder="Busque por nome ou cargo ou status"
+              className="bg-zinc-800 w-[23rem]"
+            />
+          </>
+        )}
 
         <Separator orientation="vertical" className="h-8" />
         <Menu />

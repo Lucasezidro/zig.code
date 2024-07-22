@@ -1,20 +1,19 @@
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 
-export default function SignUp() {
+export default function SignUpRecruter() {
   return (
     <main className="flex flex-col items-center justify-center mt-10">
       <div className="mb-12 flex items-center flex-col gap-4">
         <h1 className="text-2xl font-extrabold">Criar uma conta</h1>
         <span className="text-sm text-zinc-400">
-          Se você é um recrutador{' '}
+          Se você não é um recrutador{' '}
           <Link
             className="text-rose-500 hover:underline underline-offset-2"
-            href="/auth/sign-up-recruter"
+            href="/auth/sign-up"
           >
             clique aqui!
           </Link>
@@ -25,20 +24,8 @@ export default function SignUp() {
         <Label>Nome</Label>
         <Input placeholder="Digite o seu nome completo" />
 
-        <div className="grid grid-cols-8 space-x-2 items-center">
-          <div className="col-span-5">
-            <Label>Profissão</Label>
-            <Input placeholder="Digite o seu cargo profissional" />
-          </div>
-
-          <div className="col-span-3 flex items-center gap-2 mt-4">
-            <Checkbox id="finding-work" />
-            <Label htmlFor="finding-work">Estou buscando emprego.</Label>
-          </div>
-        </div>
-
-        <Label>Area</Label>
-        <Input placeholder="Digite a area da sua profissão" />
+        <Label>Empresa</Label>
+        <Input placeholder="Digite o nome da empresa para a qual esta prestando serviços" />
 
         <Label>E-mail</Label>
         <Input placeholder="Digite o seu email" />
